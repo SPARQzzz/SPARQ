@@ -19,17 +19,16 @@ module.exports = function(app) {
             });
     });
 
-    app.post("/api/usernames", function(req, res) {
+    app.post("/api/new", function(req, res) {
         console.log(req.body);
         db.User.create({
                 username: req.body.username,
                 password: req.body.password,
                 name: req.body.name,
                 age: req.body.age,
-                bio: req.body.age
+                bio: req.body.bio
             })
-            .then(function(dbPost) {
-                res.json(dbPost);
+            .then(function(dbUsers) {
             });
     });
 
