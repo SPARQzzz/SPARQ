@@ -32,4 +32,33 @@ module.exports = function(app) {
             });
     });
 
+    // methods for Like table
+    // 1) get users that like a given user
+    // 2) get a given users likes
+    // 3) get matches (bidirectional likes)
+    app.get("/api/getLikes/:username?", function(req, res) {
+        db.Like.findAll({
+                attributes: ['liked'],
+                where: {
+                    username: req.params.username
+                }
+            })
+            .then(function(dblike) {
+                res.json(dblike);
+            });
+    });
+
+    app.get("/api/getLikers/:username?", function(req, res) {
+        db.Like.findAll({
+                attributes: ['username'],
+                where: {
+                  liked: req.params.username
+                }
+            })
+            .then(function(dblike) {
+                res.json(dblike);
+            });
+    });
+
+
 }
