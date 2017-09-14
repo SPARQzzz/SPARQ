@@ -32,10 +32,19 @@ module.exports = function(app) {
             });
     });
 
+
+    //TODO: remove duplicates?
+
     // methods for Like table
     // 1) get users that like a given user
+    // returns: [{"username":"damian"},{"username":"damian"}]
+
     // 2) get a given users likes
+    //returns: [{"liked":"damian"},{"liked":"damian"},{"liked":"derek"}]
+
     // 3) get matches (bidirectional likes)
+
+
     app.get("/api/getLikes/:username?", function(req, res) {
         db.Like.findAll({
                 attributes: ['liked'],
@@ -59,6 +68,9 @@ module.exports = function(app) {
                 res.json(dblike);
             });
     });
+
+
+
 
 
 }
