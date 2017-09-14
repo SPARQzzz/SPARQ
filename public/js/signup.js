@@ -33,6 +33,9 @@ $(document).ready(function() {
         var bio = $("#bioInput").val();
 
 
+        if (isNaN(age) == false ){
+
+
         var newUser = {
             username: username,
             password: password,
@@ -64,6 +67,10 @@ $(document).ready(function() {
             alert("passwords dont match");
             console.log("dont match");
         }
+
+    }else{
+    	alert("Age must be a number");
+    }
 
     })
 

@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
         },
 
         age:{
-            type: DataTypes.BIGINT,
+            type: DataTypes.INTEGER,
         },
 
         bio:{
@@ -22,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
         }
 
         // pics:{
-        //     type: DataTypes.TEXT,
+        //     type: DataTypes.BLOB,
         // }
 
     });
