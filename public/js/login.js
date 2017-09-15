@@ -1,5 +1,5 @@
 $("#loginbutton").on("click", function(event) {
-	event.preventDefault();
+  event.preventDefault();
 	var username = $("#username").val();
 	var password = $("#pwd").val();
 	console.log(username);
