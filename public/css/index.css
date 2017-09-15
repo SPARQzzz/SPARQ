@@ -1,8 +1,27 @@
-#jumbobackground {
-	background-color: #0abab5;
+.name{
+	color: #33ccff;
+	text-transform: uppercase;
 }
-
 .love {
 	text-align: center;
-	background-color: #f9a7ec;
+}
+.profile {
+	
+	
+}
+.container {
+	
+
+}
+#pic1 {
+	padding:1px;
+   	border:1px
+    	solid #021a40;
+	display: block;
+    	margin: auto;
+    	border:1px solid #021a40;
+}
+
+#jumbobackground {
+	background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
 }

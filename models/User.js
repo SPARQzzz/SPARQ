@@ -19,11 +19,11 @@ module.exports = function(sequelize, DataTypes) {
 
         bio:{
             type: DataTypes.TEXT,
-        }
+        },
 
-        // pics:{
-        //     type: DataTypes.BLOB,
-        // }
+        gender:{
+            type:DataTypes.STRING
+        }
 
     });
 

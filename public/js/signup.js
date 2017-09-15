@@ -1,10 +1,10 @@
-//TODO make it so if user types string in age it notifys them to start over
-
 $(document).ready(function() {
+
+
     console.log("hi");
 
     $("#signupbutton").on("click", function(event) {
-        event.preventDefault();
+                event.preventDefault();
         console.log("hi2");
 
 
@@ -13,7 +13,10 @@ $(document).ready(function() {
         var password = $("#passwordInput").val();
         var age = $("#ageInput").val();
         var bio = $("#bioInput").val();
+        var gender = $("#custom-select").val();
 
+        console.log(gender);
+        localStorage.setItem('user', username);
 
         if (isNaN(age) == false) {
 
@@ -23,7 +26,8 @@ $(document).ready(function() {
                 password: password,
                 name: name,
                 age: age,
-                bio: bio
+                bio: bio,
+                gender: gender
             }
 
             function sayHi() {
@@ -40,9 +44,12 @@ $(document).ready(function() {
                 console.log("passwords match");
                 $.post("/api/new", newUser)
                     // On success, run the following code
-                    .done(function(data) {
+                    .then(function(data) {
                         // Log the data we found
                         console.log(data);
+                        window.location.href = '/picture';
+                    }).fail(function(Error){
+                        console.log(Error);
                     });
 
             } else {
@@ -55,5 +62,6 @@ $(document).ready(function() {
         }
 
     })
+
 
 });

@@ -1,14 +1,7 @@
-// *****************************************************************************
-// Server.js - This file is the initial starting point for the Node/Express server.
-//
-// ******************************************************************************
-// *** Dependencies
-// =============================================================
-var express = require("express");
+var express = require('express');
 var bodyParser = require("body-parser");
-
-// Sets up the Express App
-// =============================================================
+var path = require("path");
+// var formidable = require('formidable');
 var app = express();
 var PORT = process.env.PORT || 8080;
 
@@ -24,17 +17,14 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Static directory
 app.use(express.static("public"));
 
+
 // Routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+require("./routes/pic.js")(app);
 
-
-// =============================================================
-
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
 db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+    app.listen(PORT, function() {
+        console.log("App listening on PORT " + PORT);
+    });
 });

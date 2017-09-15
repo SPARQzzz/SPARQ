@@ -8,8 +8,11 @@ input[type=text], input[type=password] {
 
     
 }
+.dropdown{
+    z-index: 50;
+}
 #jumbobackground {
-    background-color: #0abab5;
+     background: linear-gradient(to bottom, #00ffff 0%, #99ff99 100%);
 }
 /* Set a style for all buttons */
 button {

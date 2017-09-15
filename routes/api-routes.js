@@ -26,9 +26,11 @@ module.exports = function(app) {
                 password: req.body.password,
                 name: req.body.name,
                 age: req.body.age,
-                bio: req.body.bio
+                bio: req.body.bio,
+                gender: req.body.gender
             })
             .then(function(dbUsers) {
+                res.json(dbUsers);
             });
     });
 
