@@ -15,7 +15,6 @@ $(document).ready(function() {
         var bio = $("#bioInput").val();
         var gender = $("#custom-select").val();
 
-        console.log(gender);
         localStorage.setItem('user', username);
 
         if (isNaN(age) == false) {

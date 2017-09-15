@@ -12,7 +12,7 @@ module.exports = function(app) {
         res.sendFile('public/picture.html');
     });
 
-    app.post('/', function(req, res) {
+    app.post('/api/userimage/:username', function(req, res) {
         var form = new formidable.IncomingForm();
 
         form.parse(req);
@@ -20,7 +20,7 @@ module.exports = function(app) {
         form.on('fileBegin', function(name, file) {
             // fs.rename('public/images/' + file.name);
 
-            file.path = 'public/images/' + file.name;
+            file.path = 'public/images/' + req.params.username + ".jpg";
         });
 
         form.on('file', function(name, file) {

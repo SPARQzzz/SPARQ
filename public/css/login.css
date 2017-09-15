@@ -1,3 +1,7 @@
 #jumbobackground {
 	background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
 }
+#home-button {
+     position: center;
+     background-color: rgba(0,0,0,0);
+}

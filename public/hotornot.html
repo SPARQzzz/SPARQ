@@ -3,9 +3,21 @@
 	<head>
 		<title id="Main-Title">Hot Or Not</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="css/HotOrNot.css">
+		<link rel="stylesheet" type="text/css" href="../../css/hotornot.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
 	</head>
 	<body class="Full-Body">
+
+		<div class="jumbotron text-center" id="jumbobackground">
+		        <div>
+		            <p>Sign up below</p>
+		        </div>
+		        <h1 class="display-3 title">SPARQ</h1>
+		        <button id="home-button" type="button" onclick="location.href='index.html';" value="Go Home"/><img src="https://png.icons8.com/home/office/40" title="Home" width="40" height="40"></button>
+
 		<div class="Hot-Div">
 			<h1 class="Title"> Hot Or Not</h1>
 			<p class="Lead-Text"> Choose who is Hot or Not</p>
@@ -19,36 +31,18 @@
 					<div id="gallery">
 						<!-- Append DB.Profiles.Pictures to each pic id -->
 						<div id="pic1">
-							<img src="assets/images/pic1.jpg" height="350" width="500" alt="Image 1">
+							<img src="../../assets/images/pic1.jpg" height="350" width="500" alt="Image 1">
 							<a class="previous" href="#pic3">&lt;</a>
 							<a class="next" href="#pic2">&gt;</a>
 							<h3>Same Person</h3>
 							<p>Text of image 1.</p>
 						</div>
-						<div id="pic2">
-							<img src="assets/images/pic2.jpg" height="350" width="500" alt="Image 2">
-							<a class="previous" href="#pic1">&lt;</a>
-							<a class="next" href="#pic3">&gt;</a>
-							<h3>Same Person</h3>
-							<p>Text of image 2.</p>
-						</div>
-						<div id="pic3">
-							<img src="assets/images/pic3.jpg" height="350" width="500" alt="Image 3">
-							<a class="previous" href= "#pic2">&lt;</a>
-							<a class="next" href="#pic1">&gt;</a>
-							<h3>Same Person</h3>
-							<p>Text of image 3.</p>
-						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript">
-
-		console.log("test");
-		var user = localStorage.getItem("user");
-		console.log(user);
-
-		</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+	<script src="../../js/main.js" type="text/javascript"></script>
 </html>
