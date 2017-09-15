@@ -1,1 +1,0 @@
-$('#userimage').attr('action', '/api/userimage/' + username);

@@ -1,10 +1,14 @@
 .Full-Body {
-	background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);;
+     background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);;
+}
+
+#jumbobackground {
+     background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
 }
 
 .Hot-Div {
-	text-align: center;
-	
+     text-align: center;
+     
 }
 
 #gallerywrapper {
@@ -65,19 +69,23 @@
      text-decoration:none;
  }
  .X-Button {
- 	position: absolute;
-	right: 10px;
-	top: 175px;
-	background-color: #e7e7e7; 
-	color: black; 
+     position: absolute;
+     left: -10px;
+     top: 175px;
+     background-color: #e7e7e7; 
+     color: black; 
 
 }
 
-
 .O-Button {
-	position: absolute;
-	left: 10px;
-	top: 175px;
-	background-color: #e7e7e7; 
-	color: black;
+     position: absolute;
+     right: -10px;
+     top: 175px;
+     background-color: #e7e7e7; 
+     color: black;
+}
+
+#home-button {
+     position: center;
+     background-color: rgba(0,0,0,0);
 }

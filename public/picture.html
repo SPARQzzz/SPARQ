@@ -3,10 +3,11 @@
 
 <head>
     <title>Upload Photo</title>
-    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link rel="stylesheet" type="text/css" href="css/picture.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -16,13 +17,14 @@
         <div>
             <p>Upload Photo Below</p>
         </div>
-        <h1 class="display-3 title">SPARQZZZ</h1>
+        <h1 class="display-3 title">SPARQ</h1>
+        <button id="home-button" type="button" onclick="location.href='index.html';" value="Go Home" /><img src="https://png.icons8.com/home/office/40" title="Home" width="40" height="40"></button>
         <p class="lead title"></p>
         <p class="lead title">
         </p>
     </div>
     <div class="container">
-        <form class="form-horizontal" action="/" enctype="multipart/form-data" method="post">
+        <form id="userimage" class="form-horizontal" action="/" enctype="multipart/form-data" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="name">Choose file:</label>
                 <div class="col-sm-10">
@@ -39,7 +41,10 @@
         </form>
     </div>
     <script type="text/javascript">
-    $('#userimage').attr('action', '/api/userimage/' + req.param.username);
+    console.log("test");
+    var user = localStorage.getItem("user");
+    console.log(user);
+    $('#userimage').attr('action', '/api/userimage/' + user);
     </script>
 </body>
 
