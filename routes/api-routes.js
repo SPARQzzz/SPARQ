@@ -44,7 +44,7 @@ module.exports = function(app) {
     // 2) get a given users likes
     //returns: [{"liked":"damian"},{"liked":"damian"},{"liked":"derek"}]
 
-    // 3) get matches (bidirectional likes)
+    // 3) get stack
 
 
     app.get("/api/getLikes/:username?", function(req, res) {
@@ -71,7 +71,16 @@ module.exports = function(app) {
             });
     });
 
+    //TODO: add where clause gender = ...
+    app.get("/api/getStack", function(req, res) {
+        db.User.findAll({
+                attributes: ['username','name','age','bio']
 
+            })
+            .then(function(dblike) {
+                res.json(dblike);
+            });
+    });
 
 
 
