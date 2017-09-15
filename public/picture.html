@@ -31,13 +31,16 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                <a href="/hotornot">
-                    <button type="submit" class="btn btn-info" value="Upload">Submit</button>
+                    <a href="/hotornot">
+                        <button type="submit" class="btn btn-info" value="Upload">Submit</button>
                     </a>
                 </div>
             </div>
         </form>
     </div>
+    <script type="text/javascript">
+    $('#userimage').attr('action', '/api/userimage/' + req.param.username);
+    </script>
 </body>
 
 </html>
