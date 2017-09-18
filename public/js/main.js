@@ -39,11 +39,14 @@ $(document).ready(function() {
         console.log(likes);
         console.log(likers);
         console.log(stack);
-        var stackOppSex = stack
+        //TODO: return opposite gender stack
+        var stackOppSex = stack;
         var matches = returnMatches();
+        displayBio();
+
         //display matches
         console.log(matches);
-        console.log(UserInfo);
+
         //display stack
         top = stack[0];
 
@@ -52,7 +55,15 @@ $(document).ready(function() {
 
 
 
+      function displayBio() {
 
+      // console.log(top);
+
+      $("#user").append("<img height='250px' src='/images/" + stack[0].username + ".jpg'/>")
+      $("#user").append("<h2 id='bioname'>" + stack[0].name)
+      $("#user").append("<h2 id='bioage'>" + stack[0].age);
+      $("#user").append("<h4>" + stack[0].bio);
+  }
 
     function getStack() {
 
