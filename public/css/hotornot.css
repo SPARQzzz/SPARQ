@@ -1,96 +1,136 @@
 .Full-Body {
-     background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);;
+    background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);
+    ;
 }
 
 #jumbobackground {
-     background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
+  background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
 }
 
 .Hot-Div {
-     text-align: center;
-
+    text-align: center;
 }
 
 #gallerywrapper {
-     width:640px;
-     height:450px;
-     margin:0 auto;
-     position:relative;
-     font-family:verdana, arial, sans-serif;
- }
-
- #gallerywrapper #gallery {
-     position:absolute;
-     left:0;
-     top:0;
-     height:450px;
-     width:640px;
-     overflow:hidden;
-     text-align:center;
- }
-
- #gallerywrapper #gallery div {
-     width:640px; height:900px;
-     padding-top:10px;
-     position:relative;
- }
-
- #gallerywrapper #gallery div img {
-     clear:both;
-     display:block;
-     margin:0 auto;
-     border:0;
- }
-
- #gallerywrapper #gallery div h3 {
-     padding:10px 0 0 0;
-     margin:0;
-     font-size:18px;
- }
-
- #gallerywrapper #gallery div p {
-     padding:5px 0;
-     margin:0;
-     font-size:12px;
-     line-height:18px;
- }
-
- #gallery .previous{
-     display:inline;
-     float:left;
-     margin-left:80px;
-     text-decoration:none;
- }
-
- #gallery .next{
-     display:inline;
-     float:right;
-     margin-right:80px;
-     text-decoration:none;
- }
- .X-Button {
-     position: absolute;
-     left: -10px;
-     top: 175px;
-     background-color: #e7e7e7;
-     color: black;
-
+    width: 640px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    font-family: verdana, arial, sans-serif;
 }
 
-.O-Button {
-     position: absolute;
-     right: -10px;
-     top: 175px;
-     background-color: #e7e7e7;
-     color: black;
+#gallerywrapper #gallery {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 450px;
+    width: 640px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#gallerywrapper #gallery div {
+    width: 640px;
+    height: 900px;
+    padding-top: 10px;
+    position: relative;
+}
+
+#gallerywrapper #gallery div img {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+}
+
+#gallerywrapper #gallery div h3 {
+    padding: 10px 0 0 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+#gallerywrapper #gallery div p {
+    padding: 5px 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#gallery .previous {
+    display: inline;
+    float: left;
+    margin-left: 80px;
+    text-decoration: none;
+}
+
+#gallery .next {
+    display: inline;
+    float: right;
+    margin-right: 80px;
+    text-decoration: none;
+}
+
+#likebtn {
+    float: right;
+    margin-right: -10%;
+    margin-top: 20%;
+}
+
+#dislikebtn {
+    float: left;
+    margin-left: -10%;
+    margin-top: 20%;
+}
+
+
+
+#home-button {
+    position: center;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #home-button {
-     position: center;
-     background-color: rgba(0,0,0,0);
+    position: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin-top: 6%;
 }
 
-#home-button {
-     position: center;
-     background-color: rgba(0,0,0,0);
+#userpic {
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#middle {
+    text-align: center;
+    margin-top: 1%;
+}
+
+#home{
+     margin-top:3%;
+     padding-right: 3%;
+     border-right:1px black solid;
+     display: inline-block;
+     text-decoration: none;
+     color:black;
+}
+
+#home:visited{
+     text-decoration: none;
+     color: black;
+}
+
+#matches{
+         margin-top: 3%;
+          margin-left: 2%;
+          display: inline-block;
+          text-decoration: none;
+          color:black;
+}
+
+#matches:visited{
+     text-decoration: none;
+     color:black;
 }
