@@ -4,26 +4,52 @@ $(document).ready(function() {
   		var user = localStorage.getItem("user");
   		console.log(user);
 
+      //these will be filled once the ajax finished
+      var top = {};
+      var likes = [];
+      var likers = [];
+      var stack = [];
+
+      $("#likebtn").on("click", function(event) {
+          event.preventDefault();
+          console.log("like button clicked");
+          var newLike = {
+            username: user,
+            liked: top.username
+          }
+          console.log(newLike);
+
+            $.post("/api/like", newLike)
+          // On success, run the following code
+            .then(function(data) {
+          // Log the data we posted
+            console.log(data);
+              }).fail(function(Error) {
+                console.log(Error);
+              });
+
+
+      });
+
+
+      // function runs once the database query returns
       $.when(getLikers(user),getLikes(user),getStack()).done(function(){
         console.log("done loading");
         console.log(likes);
         console.log(likers);
         console.log(stack);
-
+        var stackOppSex = stack
         var matches = returnMatches();
         //display matches
         console.log(matches);
         //display stack
-
-
-
+        top = stack[0];
 
 
       });
-    //these will be filled once the ajax finished
-    var likes = [];
-    var likers = [];
-    var stack = [];
+
+
+
 
 
     function getStack() {
@@ -64,8 +90,3 @@ $(document).ready(function() {
     }
 
 });
-
-
-
-//TODO: on click for matches, get matches
-// otherwise find matches on click to swipe?

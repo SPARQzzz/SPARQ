@@ -14,20 +14,20 @@
 
 		<div class="jumbotron text-center" id="jumbobackground">
 		        <div>
-		            <p>Sign up below</p>
+
 		        </div>
 		        <h1 class="display-3 title">SPARQ</h1>
 		        <button id="home-button" type="button" onclick="location.href='index.html';" value="Go Home"/><img src="https://png.icons8.com/home/office/40" title="Home" width="40" height="40"></button>
 
 		<div class="Hot-Div">
-			<h1 class="Title"> Hot Or Not</h1>
-			<p class="Lead-Text"> Choose who is Hot or Not</p>
+			<h1 class="Title">Matchmaker</h1>
+			<p class="Lead-Text"> Like this user -  or  - Peek at next user</p>
 		</div>
 		<div class="profile-images">
 			<div class="YesOrNo">
 				<div id="gallerywrapper">
-					<button type="button" onclick="NoFunction()" class="X-Button">X</button>
-					<button type="button" onclick="YesFunction()" class="O-Button">O</button>
+					<button type="button" id="dislikebtn" class="X-Button">Pass</button>
+					<button type="button" id="likebtn" class="O-Button">Like</button>
 					<!-- Insert DB of Profiles -->
 					<div id="gallery">
 						<!-- Append DB.Profiles.Pictures to each pic id -->

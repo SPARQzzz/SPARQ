@@ -34,17 +34,27 @@ module.exports = function(app) {
             });
     });
 
+    //add like to table
+    app.post("/api/like", function(req, res) {
+        console.log(req.body);
+        db.Like.create({
+                username: req.body.username,
+                liked: req.body.liked
+            })
+            .then(function(dbLikes) {
+                res.json(dbLikes);
+            });
+    });
 
-    //TODO: remove duplicates?
 
-    // methods for Like table
+
     // 1) get users that like a given user
     // returns: [{"username":"damian"},{"username":"damian"}]
 
     // 2) get a given users likes
     //returns: [{"liked":"damian"},{"liked":"damian"},{"liked":"derek"}]
 
-    // 3) get stack
+    // 3) get raw stack of users from database
 
 
     app.get("/api/getLikes/:username?", function(req, res) {
@@ -71,10 +81,9 @@ module.exports = function(app) {
             });
     });
 
-    //TODO: add where clause gender = ...
     app.get("/api/getStack", function(req, res) {
         db.User.findAll({
-                attributes: ['username','name','age','bio']
+                attributes: ['username','name','age','bio','gender']
 
             })
             .then(function(dblike) {
