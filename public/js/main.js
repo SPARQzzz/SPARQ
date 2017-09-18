@@ -6,6 +6,7 @@ $(document).ready(function() {
 
       //these will be filled once the ajax finished
       var top = {};
+      var UserInfo = {};
       var likes = [];
       var likers = [];
       var stack = [];
@@ -33,7 +34,7 @@ $(document).ready(function() {
 
 
       // function runs once the database query returns
-      $.when(getLikers(user),getLikes(user),getStack()).done(function(){
+      $.when(getLikers(user),getLikes(user),getStack(),getUserInfo(user)).done(function(){
         console.log("done loading");
         console.log(likes);
         console.log(likers);
@@ -42,6 +43,7 @@ $(document).ready(function() {
         var matches = returnMatches();
         //display matches
         console.log(matches);
+        console.log(UserInfo);
         //display stack
         top = stack[0];
 
@@ -71,6 +73,14 @@ $(document).ready(function() {
       return $.get("/api/getLikes/"+user, function(data) {
         likes = data;
         console.log('gotLikes');
+      });
+    }
+
+    function getUserInfo(user) {
+      return $.get("/api/getUserInfo/"+user, function(data) {
+        UserInfo = data;
+        console.log('gotUserInfo');
+        console.log(UserInfo);
       });
     }
 

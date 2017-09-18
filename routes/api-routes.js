@@ -36,7 +36,7 @@ module.exports = function(app) {
 
     //add like to table
     app.post("/api/like", function(req, res) {
-        console.log(req.body);
+        //console.log(req.body);
         db.Like.create({
                 username: req.body.username,
                 liked: req.body.liked
@@ -84,6 +84,20 @@ module.exports = function(app) {
     app.get("/api/getStack", function(req, res) {
         db.User.findAll({
                 attributes: ['username','name','age','bio','gender']
+
+
+            })
+            .then(function(dbUser) {
+                res.json(dbUser);
+            });
+    });
+
+    app.get("/api/getUserInfo/:username?", function(req, res) {
+        db.User.findAll({
+                attributes: ['username','name','age','bio','gender'],
+                where: {
+                  username: req.params.username
+                }
 
             })
             .then(function(dblike) {
