@@ -4,7 +4,7 @@
 }
 
 #jumbobackground {
-  background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
+    background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
 }
 
 .Hot-Div {
@@ -108,29 +108,49 @@
     margin-top: 1%;
 }
 
-#home{
-     margin-top:3%;
-     padding-right: 3%;
-     border-right:1px black solid;
-     display: inline-block;
-     text-decoration: none;
-     color:black;
+#home {
+    margin-top: 6%;
+    padding-right: 3%;
+    border-right: 1px black solid;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
 }
 
-#home:visited{
-     text-decoration: none;
-     color: black;
+#home:visited {
+    text-decoration: none;
+    color: black;
 }
 
-#matches{
-         margin-top: 3%;
-          margin-left: 2%;
-          display: inline-block;
-          text-decoration: none;
-          color:black;
+#matches1 {
+    margin-top: 6%;
+    margin-left: 2%;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
 }
 
-#matches:visited{
-     text-decoration: none;
-     color:black;
+#matches1:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#bioage {
+    display: inline-block;
+    margin-left: 6%;
+    margin-top: 1.2%;
+}
+
+#bioname {
+    display: inline-block;
+    float: left;
+}
+
+#bio {
+    text-align: left;
+    position: absolute;
+}
+
+#user2 {
+    margin-top: -55%;
 }

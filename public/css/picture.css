@@ -3,3 +3,7 @@
      background-color: rgba(0,0,0,0);
      border: none;
 }
+
+#jumbobackground {
+    background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
+}

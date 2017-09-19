@@ -25,6 +25,9 @@ $(document).ready(function() {
                 localStorage.setItem('user', username);
 
                 if (isNaN(age) == false) {
+                    
+                    var password = $("#passwordInput").val();
+                    var password1 = $("#password1").val();
 
 
                     var newUser = {
@@ -39,10 +42,6 @@ $(document).ready(function() {
                     function sayHi() {
                         console.log("hi");
                     };
-
-
-                    var password = $("#passwordInput").val();
-                    var password1 = $("#password1").val();
 
                     // console.log(password);
 
