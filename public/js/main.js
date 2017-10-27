@@ -4,7 +4,7 @@ $(document).ready(function() {
     var user = localStorage.getItem("user");
     console.log(user);
 
-    //these will be filled once the ajax finished
+    //*filled once the ajax finished
     var top = {};
     var UserInfo = {};
     var likes = [];
@@ -22,9 +22,7 @@ $(document).ready(function() {
         console.log(newLike);
 
         $.post("/api/like", newLike)
-            // On success, run the following code
             .then(function(data) {
-                // Log the data we posted
                 console.log(data);
             }).fail(function(Error) {
                 console.log(Error);
@@ -34,18 +32,16 @@ $(document).ready(function() {
         var matches = returnMatches();
         var matches = returnMatches();
         var count = 0;
-        
+
         console.log(matches);
         for (i = 0; i < matches.length; i++) {
             if (matches[i] === top.username) {
                 count++;
-
             }
         }
         if (count > 0) {
             alert("It's a match!");
         }
-
         console.log(matches);
         console.log(stack);
         $("#user").text("");
@@ -53,10 +49,6 @@ $(document).ready(function() {
         stack.shift();
         console.log(stack);
         displayBio();
-
-
-
-
     });
 
     $("#dislikebtn").on("click", function(event) {
@@ -72,26 +64,20 @@ $(document).ready(function() {
     })
 
 
-    // function runs once the database query returns
+    // runs once the database query returns
     $.when(getLikers(user), getLikes(user), getStack(), getUserInfo(user)).done(function() {
         console.log("done loading");
         console.log(likes);
         console.log(likers);
         console.log(stack);
-        //TODO: return opposite gender stack
         var stackOppSex = stack;
         var matches = returnMatches();
         displayBio();
-
         //display matches
         console.log(matches);
-
         //display stack
         top = stack[0];
-
-
     });
-
 
 
     function displayBio() {
