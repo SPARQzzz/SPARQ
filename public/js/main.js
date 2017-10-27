@@ -30,7 +30,6 @@ $(document).ready(function() {
 
 
         var matches = returnMatches();
-        var matches = returnMatches();
         var count = 0;
 
         console.log(matches);
